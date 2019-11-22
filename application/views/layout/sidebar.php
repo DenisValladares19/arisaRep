@@ -17,7 +17,6 @@
                         <a href="home.html"><i class="fab fa-dashcube fa-fw"></i> &nbsp; Dashboard</a>
                     </li>
 
-
                     <li>
                         <a href="#" class="nav-btn-submenu"><i class="fas fa-users fa-fw"></i> &nbsp; Clientes <i class="fas fa-chevron-down"></i></a>
                         <ul>
@@ -33,25 +32,35 @@
                         </ul>
                     </li>
 
-                    <!-- Proveedor -->
                     <li>
-                                <a href="Proveedor"><i class="fas fa-store-alt fa-fw"></i> Proveedores</a>
-
-                    </li>
-
-                    <!-- Inventario -->
-                    <li>
-                                <a href="Inventario"><i class="fas fa-clipboard-list fa-fw"></i> Inventario</a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="nav-btn-submenu"><i class="fas fa-file-invoice-dollar fa-fw"></i> &nbsp; Orden de Trabajo <i class="fas fa-chevron-down"></i></a>
+                        <a href="#" class="nav-btn-submenu"><i class="fas fa-pallet fa-fw"></i> &nbsp; Items <i class="fas fa-chevron-down"></i></a>
                         <ul>
                             <li>
-                                <a href="Orden"><i class="fas fa-plus fa-fw"></i> &nbsp; Nueva Orden de Trabajo</a>
+                                <a href="item-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar item</a>
                             </li>
                             <li>
-                                <a href="Lista_Orden"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de Ordenes de Trabajo</a>
+                                <a href="item-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de items</a>
+                            </li>
+                            <li>
+                                <a href="item-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar item</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-btn-submenu"><i class="fas fa-file-invoice-dollar fa-fw"></i> &nbsp; Préstamos <i class="fas fa-chevron-down"></i></a>
+                        <ul>
+                            <li>
+                                <a href="reservation-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo préstamo</a>
+                            </li>
+                            <li>
+                                <a href="reservation-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de préstamos</a>
+                            </li>
+                            <li>
+                                <a href="reservation-search.html"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar préstamos</a>
+                            </li>
+                            <li>
+                                <a href="reservation-pending.html"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; Préstamos pendientes</a>
                             </li>
                         </ul>
                     </li>

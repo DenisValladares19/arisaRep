@@ -12,6 +12,17 @@
         </a>
     </nav>
 
+    <!-- Page header -->
+    <!--
+    <div class="full-box page-header">
+        <h3 class="text-left">
+            <i class="fab fa-dashcube fa-fw"></i> &nbsp; DASHBOARD
+        </h3>
+        <p class="text-justify">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nostrum rerum animi natus beatae ex. Culpa blanditiis tempore amet alias placeat, obcaecati quaerat ullam, sunt est, odio aut veniam ratione.
+        </p>
+    </div>-->
+
 
     <div class="full-box tile-container">
 
