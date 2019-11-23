@@ -41,24 +41,44 @@
 <div class="table-responsive">
 
     <table class="table table-bordered" width="100%" cellspacing="0" id="data">
-        <thead>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-        <th>Dirección</th>
-        <th>Opciones</th>
+        <thead style="font-weight: bold;">
+        <td>Username</td>
+        <td>Correo</td>
+        <td>Password</td>
+        <td>Opciones</td>
         </thead>
 
+        <tbody>
+            <tr>
+                <td>JuanCa123</td>
+                <td>juan.carlos@gmail.com</td>
+                <td>*********</td>
+                <td><button class="btn-success">Modificar</button>
+                <button class="btn-danger">Eliminar</button></td>
+            </tr>
+            <tr>
+                <td>Rocio123</td>
+                <td>rocio.chicas@gmail.com</td>
+                <td>*********</td>
+                <td><button class="btn-success">Modificar</button>
+                <button class="btn-danger">Eliminar</button></td>
+            </tr>
+            <tr>
+                <td>Nelson123</td>
+                <td>nelson.thanus@gmail.com</td>
+                <td>*********</td>
+                <td><button class="btn-success">Modificar</button>
+                <button class="btn-danger">Eliminar</button></td>
+            </tr>
+        </tbody>
+
         <tfoot>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-        <th>Dirección</th>
+        <th>Username</th>
+        <th>Correo</th>
+        <th>Password</th>
         <th>Opciones</th>
 
         </tfoot>
-
-        <tbody>
-
-        </tbody>
 
     </table>
 

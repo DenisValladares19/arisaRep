@@ -16,24 +16,33 @@
 <div class="table-responsive">
 
     <table class="table table-bordered" width="100%" cellspacing="0" id="data">
-        <thead>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-        <th>Dirección</th>
-        <th>Opciones</th>
+        <thead style="font-weight: bold;">
+        <td>Identificador</td>
+        <td>Nombre</td>
         </thead>
 
-        <tfoot>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-        <th>Dirección</th>
-        <th>Opciones</th>
-
-        </tfoot>
-
         <tbody>
+            <tr>
+                <td>1</td>
+                <td>Vendedor</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Administrador</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Diseñador</td>
+            </tr>
 
         </tbody>
+
+        <tfoot>
+        <th>Identificador</th>
+        <th>Nombre</th>
+        </tfoot>
+
+
 
     </table>
 
@@ -64,7 +73,7 @@
                             <input type="text" name="telefono" id="telefonoI" class="form-control"></input>
                         </div>
                     </div>
-                    <button type="submit" name="btnSave" class="btn btn-primary">Guardar Cliente</button>
+                    <button type="submit" name="btnSave" class="btn btn-primary">Guardar Rol</button>
                 </form>
             </div>
 

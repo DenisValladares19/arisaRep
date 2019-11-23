@@ -16,24 +16,41 @@
 <div class="table-responsive">
 
     <table class="table table-bordered" width="100%" cellspacing="0" id="data">
-        <thead>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-        <th>Dirección</th>
-        <th>Opciones</th>
+        <thead style="font-weight: bold;">
+        <td>Estado</td>
+        <td>URL</td>
+        <td>Comentarios</td>
+        <td>Opciones</td>
         </thead>
 
+        <tbody>
+            <tr>
+                <td>Aprobado</td>
+                <td>Pendiente</td>
+                <td>URL Pendiente</td>
+                <td><button class="btn-success">Modificar</button></td>
+            </tr>
+            <tr>
+                <td>Reprobado</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td><button class="btn-success">Modificar</button></td>
+            </tr>
+            <tr>
+                <td>Aprobado</td>
+                <td>Pendiente</td>
+                <td>URL Pendiente</td>
+                <td><button class="btn-success">Modificar</button></td>
+            </tr>
+        </tbody>
+
         <tfoot>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-        <th>Dirección</th>
+        <th>Estado</th>
+        <th>URL</th>
+        <th>Comentarios</th>
         <th>Opciones</th>
 
         </tfoot>
-
-        <tbody>
-
-        </tbody>
 
     </table>
 

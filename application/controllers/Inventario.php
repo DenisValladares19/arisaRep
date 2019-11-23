@@ -17,8 +17,8 @@ class Inventario extends CI_Controller
 
     public function index(){
 
-
-        $this->load->view("layout/header");
+        $data["title"] = "Inventario";
+        $this->load->view("layout/header",$data);
         $this->load->view("layout/sidebar");
         $this->load->view("layout/navbar");
         $this->load->view("inventario/inventario_view");

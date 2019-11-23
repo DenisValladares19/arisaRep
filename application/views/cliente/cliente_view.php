@@ -16,24 +16,50 @@
 <div class="table-responsive">
 
     <table class="table table-bordered" width="100%" cellspacing="0" id="data">
-        <thead>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-        <th>Dirección</th>
-        <th>Opciones</th>
+        <thead style="font-weight: bold;">
+            <td>Nombre</td>
+            <td>Empresa</td>
+            <td>Telefono</td>
+            <td>Celular</td>
+            <td>Correo</td>
+            <td>Dirección</td>
+            <td>Registro Fiscal</td>
+            <td>Opciones</td>
         </thead>
+
+        <tbody>
+            <tr>
+                <td>Juan Carlos Estrada Portillo</td>
+                <td>Fepade</td>
+                <td>7732-9443</td>
+                <td>2223-9128</td>
+                <td>juan.carlos@gmail.com</td>
+                <td>Antiguo Cuscatlan</td>
+                <td>Pendiente</td>
+                <td><button class="btn-success">Modificar</button></td>
+            </tr>
+            <tr>
+                <td>Rocío Alejandra Chicas Fortis</td>
+                <td>ITCA</td>
+                <td>2223-9128</td>
+                <td>7732-9443</td>
+                <td>rocio.chicas@gmail.com</td>
+                <td>Antiguo Cuscatlan</td>
+                <td>Pendiente</td>
+                <td><button class="btn-success">Modificar</button></td>
+            </tr>
+        </tbody>
 
         <tfoot>
         <th>Nombre</th>
-        <th>Apellidos</th>
+        <th>Empresa</th>
+        <th>Telefono</th>
+        <th>Celular</th>
+        <th>Correo</th>
         <th>Dirección</th>
+        <th>Registro Fiscal</th>
         <th>Opciones</th>
-
         </tfoot>
-
-        <tbody>
-
-        </tbody>
 
     </table>
 

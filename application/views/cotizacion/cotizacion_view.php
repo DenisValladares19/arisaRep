@@ -16,25 +16,58 @@
 <div class="table-responsive">
 
     <table class="table table-bordered" width="100%" cellspacing="0" id="data">
-        <thead>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-        <th>Dirección</th>
-        <th>Opciones</th>
+        <thead style="font-weight: bold;">
+        <td>Cliente</td>
+        <td>Tipo de Impresión</td>
+        <td>Fecha</td>
+        <td>Cantidad</td>
+        <td>Precio</td>
+        <td>Descripción</td>
+        <td>Opciones</td>
         </thead>
 
-        <tfoot>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-        <th>Dirección</th>
-        <th>Opciones</th>
-
-        </tfoot>
-
         <tbody>
-
+            <tr>
+                <td>Juan Carlos</td>
+                <td>Pendiente</td>
+                <td>10/10/2019</td>
+                <td>30</td>
+                <td>$45.00</td>
+                <td>Pendiente</td>
+                <td><button class="btn-success">Modificar</button>
+                    <button class="btn-danger">Eliminar</button></td>
+            </tr>
+            <tr>
+                <td>Rocío Chicas</td>
+                <td>Pendiente</td>
+                <td>11/11/2019</td>
+                <td>50</td>
+                <td>$70.00</td>
+                <td>Pendiente</td>
+                <td><button class="btn-success">Modificar</button>
+                    <button class="btn-danger">Eliminar</button></td>
+            </tr>
+            <tr>
+                <td>Francisco Edgardo</td>
+                <td>Pendiente</td>
+                <td>01/01/2019</td>
+                <td>40</td>
+                <td>$60.00</td>
+                <td>Pendiente</td>
+                <td><button class="btn-success">Modificar</button>
+                    <button class="btn-danger">Eliminar</button></td>
+            </tr>
         </tbody>
 
+        <tfoot>
+        <td>Cliente</td>
+        <td>Tipo de Impresión</td>
+        <td>Fecha</td>
+        <td>Cantidad</td>
+        <td>Precio</td>
+        <td>Descripción</td>
+        <td>Opciones</td>
+        </tfoot>
     </table>
 
 </div>
@@ -122,7 +155,7 @@
                             <input type="text" name="telefono" id="telefonoI" class="form-control"></input>
                         </div>
                     </div>
-                    <button type="submit" name="btnSave" class="btn btn-primary">Guardar Cliente</button>
+                    <button type="submit" name="btnSave" class="btn btn-primary">Guardar Cotización</button>
                 </form>
             </div>
 
