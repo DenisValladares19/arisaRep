@@ -7,7 +7,7 @@ nombre varchar(50),
 borradoLogico int
 );
 
-create table usuari0(
+create table usuario(
 idUser int primary key auto_increment,
 nombre varchar(50),
 correo varchar(50),
@@ -20,7 +20,11 @@ foreign key(idRol) references rol(idRol)
 create table proveedor(
 idProveedor int primary key auto_increment,
 nombre varchar(50),
+empresa varchar(50),
 telefono varchar(50),
+nit  varchar(50),
+dui varchar(50),
+registroFiscal int,
 celular varchar(50),
 correo varchar(50),
 direccion varchar(50),
@@ -35,7 +39,7 @@ subtotal double,
 impuesto double,
 descuento double,
 total double,
- idProveedor int,
+idProveedor int,
 borradoLogico int,
 foreign key(idProveedor) references proveedor(idProveedor)
 );
@@ -79,10 +83,13 @@ borradoLogico int
 create table cliente(
 idCliente int primary key auto_increment,
 nombre varchar(50),
+apellido varchar(50),
 empresa varchar(50),
 telefono varchar(50),
 celular varchar(50),
 correo varchar(50),
+dui varchar(50),
+nit varchar(50),
 direccion varchar(50),
 registroFiscal float,
 borradoLogico int
@@ -91,17 +98,22 @@ borradoLogico int
 create table cotizacion(
 idCotizacion int primary key auto_increment,
 idCliente int null,
+idEstado1 int,
+idTipoImpresion int,
 fecha date,
 cantidad int,
 precio double,
 descripcion varchar(50),
 idEstado int,
-borradoLogico int
+borradoLogico int,
+foreign key(idTipoImpresion) references tipoImpresion(idTipoImpresion),
+foreign key(idEstado1) references estado1(idEstado1)
 );
 
 
 create table orden(
 idOrden int primary key auto_increment,
+idCotizacion int,
 nombre varchar(50),
 comentarios varchar(50),
 tamaño varchar(50),
@@ -110,6 +122,7 @@ idMuestra int,
 idEstado2 int,
 borradoLogico int,
 foreign key(idMuestra) references muestra(idMuestra),
+foreign key(idCotizacion) references cotizacion(idCotizacion),
 foreign key(idEstado2) references estado2(idEstado2)
 );
 
@@ -117,10 +130,10 @@ foreign key(idEstado2) references estado2(idEstado2)
 create table detalleMaterial(
 idDetalleMaterial int primary key auto_increment,
 idInventario int,
-idOrden int,
+idCotizacion int,
 borradoLogico int,
 foreign key(idInventario) references inventario(idInventario),
-foreign key(idOrden) references orden(idOrden)
+foreign key(idCotizacion) references cotizacion(idCotizacion)
 );
 
 create table factura(

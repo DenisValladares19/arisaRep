@@ -84,41 +84,25 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="cliente/saveCliente" method="post">
-
-                    <div class="form-column col-md-12">
-
-
-
-                        <div class="form-group">
+                <form action="cliente/saveCliente" method="post" id="fromModal">
+                    <div class="row">
+                    <div class="form-column col-md-6">
+                       <div class="form-group">
                             <label>Nombre de Cliente</label>
                             <input type="text" name="nombre" id="nombres" class="form-control"></input>
                         </div>
-                    </div>
-
-                    <div class="form-column col-md-12">
-
-
-
+                    
                         <div class="form-group">
                             <label>Tipo de Impresión</label>
                             <input type="text" name="apellido" id="apellidos" class="form-control"></input>
                         </div>
-                    </div>
-
-                    <div class="form-column col-md-12">
-
+                    
 
 
                         <div class="form-group">
                             <label>Fecha</label>
                             <input type="text" name="direccion" id="direccionI" class="form-control"></input>
                         </div>
-                    </div>
-
-                    <div class="form-column col-md-12">
-
-
 
                         <div class="form-group">
                             <label>Cantidad</label>
@@ -126,7 +110,7 @@
                         </div>
                     </div>
 
-                    <div class="form-column col-md-12">
+                    <div class="form-column col-md-6">
 
 
 
@@ -134,28 +118,19 @@
                             <label>Precio</label>
                             <input type="text" name="email" id="emailI" class="form-control"></input>
                         </div>
-                    </div>
-
-                    <div class="form-column col-md-12">
-
-
-
+                   
                         <div class="form-group">
                             <label>Descripción</label>
                             <input type="text" name="email" id="emailI" class="form-control"></input>
                         </div>
-                    </div>
-
-                    <div class="form-column col-md-12">
-
-
-
+                    
                         <div class="form-group">
                             <label>Estado</label>
                             <input type="text" name="telefono" id="telefonoI" class="form-control"></input>
                         </div>
                     </div>
-                    <button type="submit" name="btnSave" class="btn btn-primary">Guardar Cotización</button>
+                    </div>
+                    <button type="submit" name="btnSave" id="btnGuardar" class="btn btn-primary">Guardar Cotización</button>
                 </form>
             </div>
 
