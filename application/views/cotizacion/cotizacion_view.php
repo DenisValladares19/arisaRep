@@ -84,7 +84,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="cliente/saveCliente" method="post" id="fromModal">
+                <form action="cliente/saveCliente" method="post" id="formModal">
                     <div class="row">
                     <div class="form-column col-md-6">
                        <div class="form-group">
@@ -101,7 +101,7 @@
 
                         <div class="form-group">
                             <label>Fecha</label>
-                            <input type="text" name="direccion" id="direccionI" class="form-control"></input>
+                            <input type="text" name="fecha" id="fechaI" class="form-control"></input>
                         </div>
 
                         <div class="form-group">
