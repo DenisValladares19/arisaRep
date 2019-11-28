@@ -28,6 +28,68 @@ $(document).ready(function () {
     
     $("#btnGuardar").click(function(e){
        e.preventDefault();
-        console.log($("#formModal").serialize());
+        console.log($("#fechaI").val());
     });
+    
+    //$("#clienteI").select2();
+    
+    $('#data').DataTable({
+        language: {
+            "decimal": "",
+            "emptyTable": "No hay información",
+            "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+            "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+            "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+            "infoPostFix": "",
+            "thousands": ",",
+            "lengthMenu": "Mostrar _MENU_ Entradas",
+            "loadingRecords": "Cargando...",
+            "processing": "Procesando...",
+            "search": "Buscar:",
+            "zeroRecords": "Sin resultados encontrados",
+            "paginate": {
+                "first": "Primero",
+                "last": "Ultimo",
+                "next": "Siguiente",
+                "previous": "Anterior"
+            }
+        }
+    });
+    
+    $("#material").click(function(e){
+       e.preventDefault();
+       $("#modalInventario").modal("show");
+    });
+    
+    llenarEstado();
+    llenarCLientes();
+    llenarTipo();
 });
+
+
+function llenarEstado(){
+    $.post("cotizacion/getAllEstados",{},function(res){
+        var r = JSON.parse(res);   
+        for(var i = 0;i<r.length;i++){
+            $("#estadoI").append("<option value='"+r[i].idEstado1+"'>"+r[i].nombre+"</option>");
+        }       
+    });
+}
+
+function llenarCLientes(){
+    $.post("cotizacion/getAllCliente",{},function(res){
+        var r = JSON.parse(res);   
+        for(var i = 0;i<r.length;i++){
+            $("#clienteI").append("<option value='"+r[i].idCliente+"'>"+r[i].nombre+" "+r[i].apellido+"</option>");
+        }       
+    });
+}
+
+function llenarTipo(){
+    $.post("cotizacion/getAllTipo",{},function(res){
+        var r = JSON.parse(res);   
+        for(var i = 0;i<r.length;i++){
+            $("#tipoI").append("<option value='"+r[i].idTipoImpresion+"'>"+r[i].nombre+" </option>");
+        }       
+    });
+}

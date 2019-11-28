@@ -210,7 +210,10 @@ insert into estado1 values
 
 insert into tipoImpresion values
 (1,"Laser",5,1),
-(2,"Otra xd",10,1);
+(2,"digital",1,1),
+(3,"offset",5,1);
+
+
 
 insert into cliente values
 (1,"Jose","Perez","Jugueton S.A de C.V","2698-9874","7698-9841","joseJugeton@mail.com","03025878-0","0978-140991-687-9","Santa Tecla","MSH89SGDH4",1),

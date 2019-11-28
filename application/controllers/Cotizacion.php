@@ -14,6 +14,7 @@ class Cotizacion extends CI_Controller
 
         parent::__construct();
         $this->load->helper("url");
+        $this->load->model("Cotizacion_m");
     }
 
     public function index(){
@@ -23,7 +24,20 @@ class Cotizacion extends CI_Controller
         $this->load->view("layout/navbar");
         $this->load->view("cotizacion/cotizacion_view");
         $this->load->view("layout/footer");
-
     }
-
+    
+    public function getAllEstados(){
+        $estados = $this->Cotizacion_m->getAllEstado();
+        echo json_encode($estados);
+    }
+    
+    public function getAllCliente(){
+        $clientes = $this->Cotizacion_m->getAllCliente();
+        echo json_encode($clientes);
+    }
+    
+    public function getAllTipo(){
+        $tipo = $this->Cotizacion_m->getAllTipoImpresion();
+        echo json_encode($tipo);
+    }
 }
