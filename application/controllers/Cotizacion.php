@@ -40,4 +40,9 @@ class Cotizacion extends CI_Controller
         $tipo = $this->Cotizacion_m->getAllTipoImpresion();
         echo json_encode($tipo);
     }
+    
+    public function getAllInventario(){
+        $tipo = $this->Cotizacion_m->getAllInventario();
+        echo json_encode($tipo);
+    }
 }

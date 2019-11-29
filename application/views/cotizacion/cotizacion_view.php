@@ -148,7 +148,11 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+          <div id="mostarTabla"></div>
+              
+              
+              
+          </table>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
