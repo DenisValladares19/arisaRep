@@ -22,7 +22,8 @@ class Cotizacion extends CI_Controller
         $this->load->view("layout/header",$data);
         $this->load->view("layout/sidebar");
         $this->load->view("layout/navbar");
-        $this->load->view("cotizacion/cotizacion_view");
+        $tipo['inventario'] = $this->Cotizacion_m->getAllInventario();
+        $this->load->view("cotizacion/cotizacion_view",$tipo);
         $this->load->view("layout/footer");
     }
     
@@ -41,8 +42,9 @@ class Cotizacion extends CI_Controller
         echo json_encode($tipo);
     }
     
-    public function getAllInventario(){
-        $tipo = $this->Cotizacion_m->getAllInventario();
-        echo json_encode($tipo);
+    public function  newMaterial(){
+        $id = $this->input->post("id");
+        $inv = $this->Cotizacion_m->getAllInventario($id);
+        echo $inv;
     }
 }

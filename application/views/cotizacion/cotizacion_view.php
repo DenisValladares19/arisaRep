@@ -84,17 +84,13 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="cliente/saveCliente" method="post" id="formModal">
+                <form method="post" id="formModal">
                     <div class="row">
                     <div class="form-column col-md-6">
                        <div class="form-group">
                            <label>Nombre de Cliente</label>
                            <select name="cliente" id="clienteI" class="form-control"><option>Seleccionar</option></select>
                         </div>
-                    
-                       
-                    
-
 
                         <div class="form-group">
                             <label>Fecha</label>
@@ -118,7 +114,7 @@
                    
                         <div class="form-group">
                             <label>Descripción</label>
-                            <input type="text" name="des" id="desI" class="form-control" autocomplete="off"></input>
+                            <textarea name="des" id="desI" class="form-control" autocomplete="off"></textarea>
                         </div>
                     
                         <div class="form-group">
@@ -149,10 +145,39 @@
       </div>
       <div class="modal-body">
           <div id="mostarTabla"></div>
+              <table width='100%' id='invent'>
+                  <thead>
+                  <th>Nombre</th>
+                  <th>Stock</th>
+                  <th>Precio</th>
+                  <th>Descripción</th>
+                  <th>Acción</th>
+              </thead>
+              <tbody>
+                  <?php 
+                    foreach($inventario as $row){
+                        echo ""
+                        . "<tr>"
+                                . "<td>$row->nombre</td>"
+                                . "<td>$row->stock</td>"
+                                . "<td>$row->precio</td>"
+                                . "<td>$row->descripcion</td>"
+                                . "<td><a class='btn btn-success btn-block agregar' id='$row->idInventario'><i class='fas fa-plus-circle'></i> Agregar</a></td>"
+                        . "</tr>";
+                    }
+                  ?>
+              </tbody>
+              <tfoot>
+                <th>Nombre</th>
+                <th>Stock</th>
+                <th>Precio</th>
+                <th>Descripción</th>
+                <th>Acción</th>
+                </tfoot>
+            </table>
               
               
-              
-          </table>
+          
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>

@@ -31,7 +31,7 @@ class Cotizacion_m extends CI_Model{
     
     public function getAllInventario(){
         $this->db->select("*");
-        $this->db->from("inventario");
+        $this->db->from("inventario ");
         $this->db->order_by("inventario.nombre","ASC");
         $query = $this->db->get();
         return $query->result();
