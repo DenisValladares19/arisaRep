@@ -45,35 +45,7 @@ class Cotizacion extends CI_Controller
     
     public function  newMaterial(){
         $id = $this->input->post("id");
-        $band = false;
-        if(isset($_SESSION["material"])){
-           $material2 = $_SESSION["material"];
-           foreach ($material2 as $m){
-               if(!$this->$id == $m->idMaterial){
-                  $band = true;
-               }else{
-                   $m->cantidad += 1;
-                   $_SESSION["material"] = $material2;
-               }
-           }
-            
-           if (band) {
-                $inv = $this->Cotizacion_m->getAllInventario($id);
-                foreach ($inv as $ma) {
-                    $material = array(
-                        "idMaterial" => $ma->idInventario,
-                        "nombre" => $ma->nombre,
-                        "desc" => $ma->descripcion,
-                        "precio" => $ma->precio,
-                        "stock" => $ma->stock,
-                        "cantidad" => 1
-                    );
-                    $material2.array_push($material);
-                }
-                $_SESSION["material"] = $material2;
-            }
-            
-            echo json_encode($_SESSION["material"]);
-        }       
+        $inv = $this->Cotizacion_m->getAllInventario($id);
+        echo json_encode($inv);          
     }
 }

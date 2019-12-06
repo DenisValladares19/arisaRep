@@ -150,6 +150,7 @@
                   <th>Nombre</th>
                   <th>Stock</th>
                   <th>Precio</th>
+                  <th>Cantidad</th>
                   <th>Descripción</th>
                   <th>Acción</th>
               </thead>
@@ -161,6 +162,7 @@
                                 . "<td>$row->nombre</td>"
                                 . "<td>$row->stock</td>"
                                 . "<td>$row->precio</td>"
+                                . "<td><input type='number' class='form-control cant' value='1'/></td>"
                                 . "<td>$row->descripcion</td>"
                                 . "<td><a class='btn btn-success btn-block agregar' id='$row->idInventario'><i class='fas fa-plus-circle'></i> Agregar</a></td>"
                         . "</tr>";
@@ -171,6 +173,7 @@
                 <th>Nombre</th>
                 <th>Stock</th>
                 <th>Precio</th>
+                <th>Cantidad</th>
                 <th>Descripción</th>
                 <th>Acción</th>
                 </tfoot>
