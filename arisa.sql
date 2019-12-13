@@ -105,11 +105,8 @@ idCliente int null,
 idEstado1 int,
 idTipoImpresion int,
 fecha date,
-cantidad int,
-precio double,
-descripcion varchar(50),
-idEstado int,
 borradoLogico int,
+foreign key(idCliente) references cliente(idCliente),
 foreign key(idTipoImpresion) references tipoImpresion(idTipoImpresion),
 foreign key(idEstado1) references estado1(idEstado1)
 );
@@ -159,6 +156,29 @@ foreign key(idCliente) references cliente(idCliente),
 foreign key(idFactura) references factura(idFactura),
 foreign key(idCotifacion) references cotizacion(idCotizacion)
 );
+
+create table descCotizacion(
+idDesc int primary key auto_increment,
+subtotal double,
+iva double,
+valorTotal double
+);
+
+create table detalleCotizacionDesc(
+idDetalle int primary key auto_increment,
+idDesc int,
+idCotizacion int,
+descripcion text,
+cantidad int,
+unidad text,
+precio double,
+total double,
+foreign key(idDetalle)
+references descCotizacion(idDesc),
+foreign key(idCotizacion)
+references cotizacion(idCotizacion) 
+);
+
 
 /*create table movimiento(
 idMovimiento int primary key auto_increment,

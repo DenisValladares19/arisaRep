@@ -48,4 +48,20 @@ class Cotizacion extends CI_Controller
         $inv = $this->Cotizacion_m->getAllInventario($id);
         echo json_encode($inv);          
     }
+        
+    public function insertarCotizacion(){
+        $idCliente = $_POST["cliente"];
+        $fecha = $_POST["fecha"];
+        $idTipo = $_POST["tipoImpresion"];
+        $idEstado = $_POST["estado"];
+        $data = array(
+            "idCotizacion"=>0,
+            "idCliente"=>$idCliente,
+            "idEstado1"=>$idEstado,
+            "idTipoImpresion"=>$idTipo,
+            "fecha"=>$fecha,
+            "borradoLogico"=>1
+        );
+        echo $data;
+    }
 }
