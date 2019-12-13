@@ -87,13 +87,21 @@ $(document).ready(function () {
     });
     let a = 0;
     $("#addDes").click(function(){
-        let form = $("#formModal").serialize();
+        let form = $("#formModal").serializeArray();
         
         if(a<=0){
-            $.post("cotizacion/insertarCotizacion",{
+            /*$.post("cotizacion/insertarCotizacion",{
             form
             },function(res){
                 console.log(res);
+            });*/
+            $.ajax({
+               url:"cotizacion/insertarCotizacion",
+               type:'POST',
+               data: $("#formModal").serealize();
+                ,success:function(res){
+                    console.log(res);
+                }
             });
           $("#divDesc").show("true");
         }

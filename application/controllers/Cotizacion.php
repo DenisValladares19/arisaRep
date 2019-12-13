@@ -62,6 +62,6 @@ class Cotizacion extends CI_Controller
             "fecha"=>$fecha,
             "borradoLogico"=>1
         );
-        echo $data;
+        //$res = $this->Cotizacion_m->insertCotizacion($data);
     }
 }
